@@ -1,0 +1,19 @@
+{
+  "name": "e-commerce-backend",
+  "version": "1.0.0",
+  "description": "my ecommerce backend",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch --env-file=.env --experimental-strip-types --experimental-sqlite ./src/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "better-sqlite3": "^12.4.1",
+    "cors": "^2.8.5",
+    "express": "^5.1.0"
+  }
+}

@@ -1,0 +1,63 @@
+### Get all products
+GET http://localhost:5000/api/products
+Content-Type: application/json
+
+### Get one product (using id)
+GET http://localhost:5000/api/products/b23a5f6e-17a7-4d6f-9a03-9243156a29e2
+Content-Type: application/json
+
+### Get one category & seaarch
+GET http://localhost:5000/api/products?search=vegan&categories=protein
+Content-Type: application/json
+
+### Get one category
+GET http://localhost:5000/api/products?categories=sweet
+Content-Type: application/json
+
+### Get one search
+GET http://localhost:5000/api/products?search=vegan
+Content-Type: application/json
+
+### Get cart
+GET http://localhost:5000/api/cart
+Content-Type: application/json
+
+### POST one product that already exist in cart
+POST http://localhost:5000/api/cart
+Content-Type: application/json
+
+{
+  "id": "b23a5f6e-17a7-4d6f-9a03-9243156a29e2",
+  "quantity": 3
+}
+
+### POST one product that already exist in cart
+POST http://localhost:5000/api/cart
+Content-Type: application/json
+
+{
+  "id": "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
+  "quantity": 3
+}
+
+### DELETE one product that already exist in cart
+DELETE  http://localhost:5000/api/cart/e43638ce-6aa0-4b85-b27f-e1d07eb678c6
+
+### DELETE one quantity of product that already exist in cart
+DELETE  http://localhost:5000/api/cart/e43638ce-6aa0-4b85-b27f-e1d07eb678c6?all=1
+
+### 🛒 Checkout — create new order from current cart
+POST http://localhost:5000/api/checkout/checkout
+Content-Type: application/json
+
+### 🧾 Get all orders
+GET http://localhost:5000/api/checkout/orders
+
+### 🧾 Get all order items
+GET http://localhost:5000/api/checkout/items
+
+### DELETE all orders and order_items
+DELETE http://localhost:5000/api/checkout/orders
+
+### 🧾 Get img of 1 order item
+GET http://localhost:5000/api/checkout/orders
